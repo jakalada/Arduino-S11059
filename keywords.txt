@@ -1,0 +1,22 @@
+# KEYWORD1 specifies datatypes
+
+S11059	KEYWORD1
+
+# KEYWORD2 specifies methods and functions
+
+begin	KEYWORD2
+setGain	KEYWORD2
+setMode	KEYWORD2
+setTint	KEYWORD2
+setManualTiming	KEYWORD2
+delay	KEYWORD2
+reset	KEYWORD2
+standby	KEYWORD2
+start	KEYWORD2
+update	KEYWORD2
+isStandby	KEYWORD2
+getRed	KEYWORD2
+getGreen	KEYWORD2
+getBlue	KEYWORD2
+getIR	KEYWORD2
+

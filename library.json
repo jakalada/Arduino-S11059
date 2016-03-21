@@ -1,0 +1,23 @@
+{
+  "name": "S11059",
+  "description": "A color sensor library for Arduino",
+  "keywords": "sensor, color",
+  "authors":
+  {
+    "name": "Hideki Hamada",
+    "email": "jakalada.net@gmail.com"
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/jakalada/Arduino-S11059.git"
+  },
+  "version": "0.0.1",
+  "url": "https://github.com/jakalada/Arduino-S11059",
+  "frameworks": "arduino",
+  "platforms":
+  [
+    "atmelavr",
+    "espressif"
+  ]
+}
