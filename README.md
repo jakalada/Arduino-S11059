@@ -6,9 +6,9 @@ S11059 (A color sensor) library for Arduino.
 
 ## Download
 
-[download zip file](https://github.com/jakalada/Arduino-S11059/archive/master.zip)
+[Download the latest library release.](https://github.com/jakalada/Arduino-S11059/releases/latest)
 
 ## Examples
 
-[please see example code](./examples/FixedMode/FixedMode.ino)
+[Please see example code.](./examples)
 
