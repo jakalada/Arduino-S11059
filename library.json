@@ -12,12 +12,14 @@
     "type": "git",
     "url": "https://github.com/jakalada/Arduino-S11059.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2,
   "url": "https://github.com/jakalada/Arduino-S11059",
   "frameworks": "arduino",
   "platforms":
   [
     "atmelavr",
-    "espressif"
+    "intel_arc32",
+    "espressif8266",
+    "espressif32"
   ]
 }
