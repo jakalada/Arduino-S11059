@@ -13,7 +13,7 @@ S11059 colorSensor;
 
 void setup() {
   Serial.begin(9600);
-  colorSensor.begin();
+  Wire.begin();
 
   // 積分モードを固定時間モードに設定
   colorSensor.setMode(S11059_MODE_FIXED);

@@ -4,7 +4,6 @@ S11059	KEYWORD1
 
 # KEYWORD2 specifies methods and functions
 
-begin	KEYWORD2
 setGain	KEYWORD2
 setMode	KEYWORD2
 setTint	KEYWORD2

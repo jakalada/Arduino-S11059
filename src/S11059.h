@@ -10,6 +10,7 @@
 #define S11059_h
 
 #include "Arduino.h"
+#include <Wire.h>
 
 #define S11059_GAIN_HIGH      1
 #define S11059_GAIN_LOW       0
@@ -27,6 +28,7 @@
 
 class S11059 {
   private:
+    TwoWire *_wire;
     uint16_t _rgbir[4];
     uint8_t _gain;
     uint8_t _mode;
@@ -43,8 +45,7 @@ class S11059 {
     bool writeRegisters(uint8_t address, uint8_t *values, uint8_t size);
 
   public:
-    S11059();
-    void begin();
+    S11059(TwoWire *wire=&Wire);
     void setGain(uint8_t gain);
     void setMode(uint8_t mode);
     void setTint(uint8_t tint);

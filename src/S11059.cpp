@@ -59,7 +59,8 @@
 #define TINT_TIME_2_US   44800   // 44.8 ms
 #define TINT_TIME_3_US   358400  // 358.4ms
 
-S11059::S11059() {
+S11059::S11059(TwoWire *wire) {
+  _wire = wire;
   for (int i = 0; i < 4; i++) {
     _rgbir[i] = 0;
   }
@@ -69,10 +70,6 @@ S11059::S11059() {
   _mode = S11059_MODE_MANUAL;
   _tint = S11059_TINT0;
   _manualTiming = 0x0C30;
-}
-
-void S11059::begin() {
-  Wire.begin();
 }
 
 void S11059::setGain(uint8_t gain) {
@@ -236,11 +233,11 @@ bool S11059::write(uint8_t value) {
 }
 
 bool S11059::write(uint8_t *values, size_t size) {
-  Wire.beginTransmission(I2C_ADDR);
+  _wire->beginTransmission(I2C_ADDR);
 
   bool result = false;
-  if (Wire.write(values, size) == size) {
-    switch (Wire.endTransmission()) {
+  if (_wire->write(values, size) == size) {
+    switch (_wire->endTransmission()) {
       case 0: // success
         result = true;
         break;
@@ -267,7 +264,7 @@ bool S11059::write(uint8_t *values, size_t size) {
 
     }
   } else {
-    Wire.endTransmission();
+    _wire->endTransmission();
     result = false;
   }
   delayMicroseconds(100);
@@ -275,10 +272,10 @@ bool S11059::write(uint8_t *values, size_t size) {
 }
 
 bool S11059::read(uint8_t *values, int size) {
-  Wire.requestFrom(I2C_ADDR, size);
-  if (Wire.available() == size) {
+  _wire->requestFrom(I2C_ADDR, size);
+  if (_wire->available() == size) {
     for (uint8_t i = 0; i < size; i++) {
-      values[i] = Wire.read();
+      values[i] = _wire->read();
     }
     return true;
   } else {
