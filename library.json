@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/jakalada/Arduino-S11059.git"
   },
-  "version": "0.0.3",
+  "version": "0.1.0",
   "url": "https://github.com/jakalada/Arduino-S11059",
   "frameworks": "arduino",
   "platforms":
